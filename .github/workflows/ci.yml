@@ -1,12 +1,15 @@
+name: Lab CI
+
 on:
-  push
+  push:
 jobs:
   Build:
     runs-on: ubuntu-20.04
     steps:
-      - name: Setup Java JDK
+      - name: Checkout
         uses: actions/checkout@v2
-      - uses: actions/setup-java@v2
+      - name: Install JDK
+        uses: joschi/setup-jdk@v2.3.0
         with:
           distribution: 'adopt'
           java-version: '15'
