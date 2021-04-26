@@ -1,0 +1,10 @@
+  on:
+    push
+  jobs:
+    Build:
+      runs-on: ubuntu-latest
+      steps:
+        - with:
+            java-version: 15
+        - name: Build
+          run: ./gradlew clean build
