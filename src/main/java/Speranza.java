@@ -1,3 +1,4 @@
+package main.java;
 
 class Speranza {
     public static void main(String[] args) {
