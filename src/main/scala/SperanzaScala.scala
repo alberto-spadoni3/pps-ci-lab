@@ -1,4 +1,4 @@
-class SperanzaScala {
+object SperanzaScala {
   def main(args: Array[String]): Unit = {
     println("The number from Java class is: " + Speranza.getOne)
   }
