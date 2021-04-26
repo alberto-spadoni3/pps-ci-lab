@@ -4,7 +4,7 @@
     Build:
       runs-on: ubuntu-latest
       steps:
-        - with:
-            java-version: 15
+        - name: Setup Java JDK
+          uses: actions/setup-java@v2.0.0
         - name: Build
           run: ./gradlew clean build
