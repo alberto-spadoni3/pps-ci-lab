@@ -11,6 +11,8 @@ jobs:
       - name: Install JDK
         uses: joschi/setup-jdk@v2.3.0
         with:
-          java-version: 11
+          distribution: 'adopt'
+          java-version: '15'
+          check-latest: true
       - name: Build
-        run: ./gradlew check
+        run: ./gradlew clean build
