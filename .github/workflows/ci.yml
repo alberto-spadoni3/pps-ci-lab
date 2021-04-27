@@ -1,18 +1,13 @@
-name: Lab CI
-
-on:
-  push:
-jobs:
-  Build:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install JDK
-        uses: joschi/setup-jdk@v2.3.0
-        with:
-          distribution: 'adopt'
-          java-version: '15'
-          check-latest: true
-      - name: Build
-        run: ./gradlew clean build
+  name: pps-ci-lab
+  on:
+    push:
+  jobs:
+    Build:
+      runs-on: ubuntu-20.04
+      steps:
+        - name: Install Java
+        - uses: actions/setup-java@v2
+          with:
+            distribution: 'adopt'
+            java-version: '15'
+        - run: ./gradlew clean build
